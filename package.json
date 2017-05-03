@@ -1,15 +1,27 @@
 {
-  "name": "chat-example",
+  "name": "licita-sp",
   "version": "0.0.0",
-  "description": "A chat example to showcase how to use `socket.io` with a static `express` server with `async` for control flow.",
-  "main": "server.js",
-  "repository": "",
-  "author": "Mostafa Eweda <mo.eweda@gmail.com>",
+  "description": "Tracker das licitações de São Paulo (SP).",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leopiccionia/LicitaSP.git"
+  },
   "dependencies": {
     "async": "~0.2.8",
     "cheerio": "^0.22.0",
     "express": "~3.2.4",
     "request": "^2.81.0",
     "socket.io": "~0.9.14"
-  }
+  },
+  "main": "enegocios.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Leonardo Piccioni de Almeida, Marcos Vinicius de Aquino Giurni, Rafael Ribeiro Motta Ferreira, Roberto de Lucas Mescoloto",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/leopiccionia/LicitaSP/issues"
+  },
+  "homepage": "https://github.com/leopiccionia/LicitaSP#readme"
 }
