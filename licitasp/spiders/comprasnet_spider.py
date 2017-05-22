@@ -14,7 +14,6 @@ class ComprasNet(scrapy.Spider):
         yield scrapy.Request(url='http://www.comprasnet.gov.br/ConsultaLicitacoes/ConsLicitacaoDia.asp?pagina=1')
 
     def parse(self, response):
-        unicode(response.body.decode('latin-1')).encode('utf-8')
         forms = response.css('form')
         for form in forms:
             date_capture = form.re('<b>Entrega da Proposta:</b>\\xa0(\d{2}/\d{2}/\d{4}) \\xe0s (\d{2}:\d{2})Hs')
@@ -29,5 +28,4 @@ class ComprasNet(scrapy.Spider):
         if has_next:
             current_page = re.search('(\\d+)$', response.url).group(0)
             next_url = response.url.replace(current_page, str(int(current_page) + 1))
-            print next_url
             yield scrapy.Request(url=next_url, callback=self.parse)
