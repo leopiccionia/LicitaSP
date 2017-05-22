@@ -87,3 +87,6 @@ ROBOTSTXT_OBEY = True
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+
+#From https://stackoverflow.com/questions/9181214/scrapy-text-encoding
+FEED_EXPORT_ENCODING = 'utf-8'
