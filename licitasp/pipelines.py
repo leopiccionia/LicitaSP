@@ -16,12 +16,13 @@ class AcquisitionsPipeline(object):
 
     def open_spider(self, spider):
         self.client = pymongo.MongoClient()
-        self.base = self.client['licitasp']
+        self.base = self.client.licitasp
 
     def process_item(self, item, spider):
         dict_item = dict(item)
         dict_item['timestamp'] = datetime.datetime.utcnow()
-        self.client['acquisitions'].insert(dict_item)
+        self.base.acquisitions.insert_one(dict_item)
+        print(dict_item)
         return item
 
     def close_spider(self, spider):
