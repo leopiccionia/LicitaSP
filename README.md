@@ -34,4 +34,4 @@ A estrutura de diretórios deve soar familiar para alguém que já usou [Scrapy]
 
 ## Requisitos
 
-O projeto requer Python com os plugins `scrapy` e `pymongo`, bem como MongoDB.
+O projeto requer Python com os plugins `scrapy`, `flask` e `pymongo`, bem como MongoDB.
