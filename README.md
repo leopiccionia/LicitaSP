@@ -32,6 +32,17 @@ A estrutura de diretórios deve soar familiar para alguém que já usou [Scrapy]
 		* `comprasnet_spider.py`: *Crawler* do site Comprasnet.
 		* `comprasnet_spider.py.md`: Documentação extensiva do arquivo anterior em formato *literate programming*.
 
+## Documentação da API
+
+A chamada `GET /api/acquisitions` retorno um vetor de objetos JSON contendo os seguintes campos de interesse:
+
+* `date`: Data de abertura da licitação.
+* `description:` Descrição resumida do objeto da licitação.
+* `link`: URL para página com maiores detalhes sobre a licitação.
+* `modality`: Modalidade de licitação (ex: pregão eletrônico, pregão presencial, convite, etc.).
+* `organization`: Órgão público licitante.
+* `source`: Origem dos dados (no caso, "comprasnet").
+
 ## Requisitos
 
 O projeto requer Python com os plugins `scrapy`, `flask` e `pymongo`, bem como MongoDB.
